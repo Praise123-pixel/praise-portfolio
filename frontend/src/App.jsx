@@ -183,7 +183,7 @@ const navItems = [
   ["stack", "Stack"],
   ["projects", "Projects"],
   ["message", "Message"],
-  ["contact", "Contact"],
+  ["contact", "Socials"],
 ];
 
 const stackLookup = Object.fromEntries(techStack.map((item) => [item.name, item]));
@@ -585,7 +585,7 @@ function App() {
             <div className="container contact-grid">
               <article className="contact-links reveal">
                 <div className="section-heading compact">
-                  <span>Contact</span>
+                  <span>Socials</span>
                   <h2>Quick links.</h2>
                 </div>
 
