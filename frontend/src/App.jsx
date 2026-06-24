@@ -2,222 +2,288 @@ import { useEffect, useState } from "react";
 
 const profile = {
   name: "Asiimire Praise",
-  title: "Full-Stack Software Developer",
-  subtitle:
-    "I build responsive interfaces, practical business tools, and reliable backend features with JavaScript, React, Node.js, and NestJS.",
+  role: "Software Engineer",
+  tagline: "Asiimire Praise",
+  experienceBadge: "2+ Years of Experience",
+  blurb:
+    "Motivated Software Engineer focused on building backend systems, mobile applications, and web solutions. I specialize in TypeScript and JavaScript, building scalable APIs and reliable applications for real-world products.",
   location: "Kampala, Uganda",
   email: "praiseasiimire11@gmail.com",
   phone: "+256 773 608 073",
   linkedin: "https://www.linkedin.com/in/praise-asiimire-1a0210374/",
   github: "https://github.com/Praise123-pixel",
-  vercel: "https://vercel.com/asiimire-praises-projects",
   resume: "/assets/Asiimire_Praise_CV.pdf",
-  photo: "/assets/WhatsApp Image 2026-06-09 at 09.51.51.jpeg",
+  portfolioUrl: "https://praise-portfolio-tau.vercel.app/",
+  photo: "/assets/profile-praise.jpeg",
 };
 
-const highlights = [
-  { value: "3", label: "Live projects featured" },
-  { value: "2025", label: "Started hands-on software training" },
-  { value: "Web + API", label: "Frontend and backend delivery" },
+const introFacts = [
+  { label: "Based in", value: "Kampala, Uganda" },
+  { label: "Focus", value: "Frontend, backend, mobile" },
+  { label: "Open to", value: "Internships, junior roles, freelance" },
 ];
 
-const strengths = [
-  "Full-stack software developer with practical experience across web, mobile, and backend product work.",
-  "Comfortable building with JavaScript, TypeScript, React, React Native, Node.js, NestJS, PostgreSQL, and MongoDB.",
-  "Strong interest in clean user interfaces, reliable APIs, debugging, documentation, and product-focused delivery.",
+const aboutPoints = [
+  "Build backend systems and scalable APIs.",
+  "Deliver web and mobile product interfaces.",
+  "Work across practical business-focused software.",
 ];
 
-const quickFacts = [
+const experience = [
   {
-    label: "Current role",
-    value: "Full-Stack and Mobile App Developer",
+    year: "2025 - 2026",
+    title: "Software Engineering Apprentice",
+    place: "Refactory Academy",
+    text: "Built real product features, APIs, interfaces, and team-based delivery work.",
   },
   {
-    label: "Focus",
-    value:
-      "Frontend engineering, API integration, and business-focused software solutions",
+    year: "Project Work",
+    title: "Full-Stack Delivery",
+    place: "Web + Mobile Products",
+    text: "Worked across dashboards, business systems, and customer-facing product flows.",
   },
   {
-    label: "Availability",
-    value:
-      "Open to internships, junior roles, freelance work, and collaborative product teams",
+    year: "2026",
+    title: "Lead Software Engineer",
+    place: "Aster Consulting Group",
+    text: "Supported startup and SME delivery across frontend features, backend workflows, debugging, and documentation.",
+  },
+];
+
+const techStack = [
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "React Native",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "NestJS",
+    icon: "https://cdn.simpleicons.org/nestjs/E0234E",
+  },
+  {
+    name: "Next.js",
+    icon: "https://cdn.simpleicons.org/nextdotjs/FFFFFF",
+  },
+  {
+    name: "MongoDB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    name: "HTML5",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "CSS3",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "Vercel",
+    icon: "https://cdn.simpleicons.org/vercel/FFFFFF",
+  },
+  {
+    name: "Vite",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
+  },
+  {
+    name: "DigitalOcean",
+    icon: "https://cdn.simpleicons.org/digitalocean/0080FF",
   },
 ];
 
 const projects = [
   {
-    title: "Beyond Sports Organisation",
-    kicker: "Full-stack platform",
-    description:
-      "Contributed to a corporate sports and wellness platform built to reduce fragmented fitness tracking and improve accountability, coaching visibility, and team engagement.",
-    impact: [
-      "Supported web and mobile experiences for group challenges, activity tracking, and coaching workflows.",
-      "Worked with React, React Native, and NestJS-connected services in a real product environment.",
-      "Contributed to API documentation, collaboration workflows, and database-backed features.",
-    ],
-    stack: [
-      "React",
-      "React Native",
-      "NestJS",
-      "TypeScript",
-      "PostgreSQL",
-      "Swagger",
-      "Docker",
-    ],
-    role: "Frontend, mobile, and backend collaboration",
+    title: "Beetle",
+    type: "In Progress",
+    summary: "Fast local delivery platform for everyday orders.",
+    image: "/assets/beetle.png",
+    live: "https://beetle-weld.vercel.app/",
+    repo: profile.github,
+    featured: true,
+    stack: ["React", "JavaScript", "CSS3", "Vercel"],
+  },
+  {
+    title: "Beyond Sports",
+    type: "Product Work",
+    summary: "Corporate wellness app across web and mobile flows.",
+    image: "/assets/beyond-sports.png",
     live: "https://beyondsports.fitness/",
-    coverClass: "cover-beyond",
+    repo: profile.github,
+    stack: ["React", "React Native", "NestJS", "PostgreSQL"],
   },
   {
-    title: "Mayondo Wood & Furniture Ltd",
-    kicker: "Business management system",
-    description:
-      "Developed a practical business system for managing inventory, sales, customer records, supplier information, delivery charges, and operational reporting.",
-    impact: [
-      "Built product, stock, payment, and receipt flows that support day-to-day business operations.",
-      "Implemented logic for delivery charge calculation, stock updates, and sales reporting.",
-      "Translated a real business process into a usable digital workflow with database-driven features.",
-    ],
-    stack: ["JavaScript", "React", "Node.js", "MongoDB", "HTML", "CSS"],
-    role: "Full-stack development",
+    title: "Mayondo Wood & Furniture",
+    type: "Business System",
+    summary: "Inventory, sales, and workflow management for daily operations.",
+    image: "/assets/mayondo.png",
     live: "https://project-jo98.vercel.app/",
-    coverClass: "cover-mayondo",
+    repo: profile.github,
+    stack: ["React", "Node.js", "MongoDB", "JavaScript"],
   },
   {
-    title: "Weather-AI Dashboard",
-    kicker: "API integration project",
-    description:
-      "Built a weather dashboard that combines forecast data and AI-assisted summaries in a clean, responsive interface designed for quick understanding.",
-    impact: [
-      "Connected live weather API data to reusable interface components and state-driven views.",
-      "Handled loading, error, and data-display states for a smoother user experience.",
-      "Published the project online with clear structure for review by employers and collaborators.",
-    ],
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "API Integration",
-      "Responsive UI",
-      "Vercel",
-    ],
-    role: "Frontend and integration development",
+    title: "Weather AI Dashboard",
+    type: "Dashboard",
+    summary: "Forecast views with AI-assisted weather insights.",
+    image: "/assets/weather-ai.png",
     live: "https://weather-ai-dashboard-eosin.vercel.app/?lat=0.3476&lon=32.5825&days=7&units=metric&ai=true&label=Kampala&timezone=Africa%2FKampala",
-    coverClass: "cover-weather",
+    repo: profile.github,
+    stack: ["Next.js", "TypeScript", "React", "Vercel"],
   },
 ];
 
-const capabilities = [
+const contactLinks = [
   {
-    title: "Frontend Development",
-    description:
-      "Responsive interfaces built with JavaScript, TypeScript, React, HTML, and CSS, with attention to layout, usability, and accessibility.",
-    skills: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "HTML",
-      "CSS",
-      "Responsive UI",
-    ],
+    label: "Email",
+    href: `mailto:${profile.email}`,
+    icon: "mail",
   },
   {
-    title: "Backend Development",
-    description:
-      "Hands-on experience with Node.js and NestJS for REST APIs, backend debugging, and connecting interfaces to useful data flows.",
-    skills: [
-      "Node.js",
-      "NestJS",
-      "REST APIs",
-      "Swagger/OpenAPI",
-      "Authentication concepts",
-    ],
+    label: "LinkedIn",
+    href: profile.linkedin,
+    icon: "linkedin",
   },
   {
-    title: "Data & Deployment",
-    description:
-      "Comfortable working with database-driven features, Git workflows, cloud deployment tools, and product delivery practices.",
-    skills: [
-      "PostgreSQL",
-      "MongoDB",
-      "Git",
-      "GitHub",
-      "Docker",
-      "Vercel",
-      "DigitalOcean",
-      "Render",
-    ],
+    label: "GitHub",
+    href: profile.github,
+    icon: "github",
   },
   {
-    title: "Mobile & Teamwork",
-    description:
-      "Able to contribute across mobile UI, API consumption, agile collaboration, debugging, documentation, and continuous learning.",
-    skills: [
-      "React Native",
-      "API Consumption",
-      "Agile teamwork",
-      "Debugging",
-      "Technical documentation",
-    ],
+    label: "CV",
+    href: profile.resume,
+    icon: "resume",
+    download: true,
   },
 ];
 
-const experience = [
-  {
-    title: "Software Engineering Apprentice",
-    org: "Refactory Academy",
-    period: "2025 - Present",
-    label: "Current",
-    points: [
-      "Build and contribute to real-world software applications across frontend, backend, and mobile product work.",
-      "Develop backend features with Node.js, TypeScript, and NestJS while supporting RESTful workflows and data-driven logic.",
-      "Collaborate in agile teams through sprint planning, reviews, Git workflows, debugging, testing, and project presentations.",
-    ],
-  },
-  {
-    title: "Advanced Certificate in Software Engineering",
-    org: "Refactory Academy",
-    period: "2025 - Present",
-    label: "Education",
-    points: [
-      "Practical training in full-stack software development, databases, testing, debugging, and deployment workflows.",
-      "Focused on JavaScript, TypeScript, React, Node.js, Git collaboration, and professional product delivery.",
-    ],
-  },
+const navItems = [
+  ["home", "Open to work"],
+  ["about", "About"],
+  ["stack", "Stack"],
+  ["projects", "Projects"],
+  ["message", "Message"],
+  ["contact", "Contact"],
 ];
 
-const education = [
-  "Certificate in Software Engineering, Refactory Academy (2025)",
-];
-
-const certifications = [
-  "Software Engineering, Refactory Academy",
-  "Introduction to Microsoft Azure: Describe Cloud Concepts, Microsoft Learn (September 2025)",
-  "Soft Skills, BrighterMonday Uganda",
-];
-
+const stackLookup = Object.fromEntries(techStack.map((item) => [item.name, item]));
 const initialForm = {
   name: "",
   email: "",
   company: "",
   message: "",
 };
-
 const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT?.trim();
 const contactEndpoint = formspreeEndpoint || "/api/messages";
+const routeMap = {
+  home: "/",
+  about: "/about",
+  stack: "/stack",
+  projects: "/projects",
+  message: "/message",
+  contact: "/contact",
+};
+
+function getRouteFromPath(pathname) {
+  const cleanPath = pathname.replace(/\/+$/, "") || "/";
+  const match = Object.entries(routeMap).find(([, path]) => path === cleanPath);
+  return match ? match[0] : "home";
+}
+
+function Icon({ name }) {
+  const paths = {
+    arrow:
+      "M5 12h14m-5-5 5 5-5 5",
+    mail:
+      "M3 6.75 12 13.5l9-6.75M5.25 5.25h13.5A2.25 2.25 0 0 1 21 7.5v9a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 16.5v-9a2.25 2.25 0 0 1 2.25-2.25Z",
+    linkedin:
+      "M7.5 8.25v8.25m0-11.25v.75M12 16.5v-4.5m0 0c0-1.243 1.007-2.25 2.25-2.25S16.5 10.757 16.5 12v4.5m-9-3.75h0M6.75 5.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM5.25 3.75h13.5A1.5 1.5 0 0 1 20.25 5.25v13.5a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V5.25a1.5 1.5 0 0 1 1.5-1.5Z",
+    github:
+      "M9 19.5c-4.125 1.125-4.125-2.063-5.625-2.625m11.25 5.25v-2.902a2.524 2.524 0 0 0-.712-1.765c2.385-.266 4.887-1.17 4.887-5.325a4.13 4.13 0 0 0-1.125-2.85 3.832 3.832 0 0 0-.067-2.813s-.918-.292-3.008 1.117a10.496 10.496 0 0 0-5.4 0C7.11 6.178 6.192 6.47 6.192 6.47a3.832 3.832 0 0 0-.067 2.813A4.13 4.13 0 0 0 5 12.133c0 4.125 2.49 5.062 4.875 5.325A2.524 2.524 0 0 0 9.163 19.2V22.125",
+    resume:
+      "M7.5 3.75h6l3 3v11.25A2.25 2.25 0 0 1 14.25 20.25h-6.75A2.25 2.25 0 0 1 5.25 18V6A2.25 2.25 0 0 1 7.5 3.75Zm6 0v3h3M8.25 11.25h6.75m-6.75 3h6.75m-6.75 3h4.5",
+    menu:
+      "M4.5 6.75h15m-15 5.25h15m-15 5.25h15",
+    location:
+      "M12 21s6-5.33 6-11.25a6 6 0 1 0-12 0C6 15.67 12 21 12 21Zm0-8.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z",
+    qr:
+      "M4.5 4.5h5.25v5.25H4.5Zm0 9.75h5.25v5.25H4.5Zm9.75-9.75h5.25v5.25h-5.25Zm0 9.75h2.25v2.25h-2.25Zm3 0h2.25v5.25h-5.25v-2.25h3Zm-1.5-7.5h3.75v3.75h-3.75Zm-4.5 10.5h2.25V19.5h-2.25Zm0-3h2.25v2.25h-2.25Z",
+  };
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d={paths[name]} />
+    </svg>
+  );
+}
+
+function TechIcon({ name }) {
+  const item = stackLookup[name];
+
+  if (!item) {
+    return null;
+  }
+
+  return (
+    <span className="stack-mini" title={item.name} aria-label={item.name}>
+      <img src={item.icon} alt="" />
+    </span>
+  );
+}
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeRoute, setActiveRoute] = useState("home");
   const [year, setYear] = useState("");
+  const [shareUrl, setShareUrl] = useState(profile.portfolioUrl);
   const [form, setForm] = useState(initialForm);
-  const [status, setStatus] = useState({
-    type: "idle",
-    message: "",
-  });
+  const [status, setStatus] = useState({ type: "idle", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [copyStatus, setCopyStatus] = useState("");
 
   useEffect(() => {
     setYear(String(new Date().getFullYear()));
+    setActiveRoute(getRouteFromPath(window.location.pathname));
 
+    const currentUrl = window.location.href;
+    const isLocal = /localhost|127\.0\.0\.1/.test(window.location.hostname);
+    setShareUrl(isLocal ? profile.portfolioUrl : currentUrl);
+
+    const handlePopState = () => {
+      setActiveRoute(getRouteFromPath(window.location.pathname));
+      setMenuOpen(false);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeRoute]);
+
+  useEffect(() => {
     const nodes = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       (entries) => {
@@ -228,27 +294,26 @@ function App() {
           }
         });
       },
-      { threshold: 0.14 },
+      { threshold: 0.16 },
     );
 
     nodes.forEach((node) => observer.observe(node));
 
     return () => observer.disconnect();
-  }, []);
+  }, [activeRoute]);
 
   useEffect(() => {
-    if (!status.message) {
+    if (!copyStatus && !status.message) {
       return undefined;
     }
 
     const timeoutId = window.setTimeout(() => {
+      setCopyStatus("");
       setStatus({ type: "idle", message: "" });
-    }, 5000);
+    }, 2200);
 
     return () => window.clearTimeout(timeoutId);
-  }, [status]);
-
-  const closeMenu = () => setMenuOpen(false);
+  }, [copyStatus, status]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -279,24 +344,15 @@ function App() {
         const formspreeError = Array.isArray(data.errors)
           ? data.errors[0]?.message
           : undefined;
-        throw new Error(
-          formspreeError || data.message || "Something went wrong.",
-        );
+        throw new Error(formspreeError || data.message || "Message not sent.");
       }
 
       setForm(initialForm);
-      setStatus({
-        type: "success",
-        message:
-          "Your message has been sent successfully. Thank you for reaching out.",
-      });
+      setStatus({ type: "success", message: "Message sent." });
     } catch (error) {
       setStatus({
         type: "error",
-        message:
-          error instanceof Error
-            ? error.message
-            : "Your message could not be sent right now.",
+        message: error instanceof Error ? error.message : "Message failed.",
       });
     } finally {
       setIsSubmitting(false);
@@ -306,30 +362,333 @@ function App() {
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText(profile.email);
-      setStatus({
-        type: "success",
-        message: "Email address copied successfully.",
-      });
+      setCopyStatus("Email copied");
     } catch {
-      setStatus({
-        type: "error",
-        message: "Could not copy the email address. Please copy it manually.",
-      });
+      setCopyStatus("Copy failed");
+    }
+  };
+
+  const navigateTo = (route) => {
+    const nextPath = routeMap[route] || routeMap.home;
+    if (window.location.pathname !== nextPath) {
+      window.history.pushState({}, "", nextPath);
+    }
+    setActiveRoute(route);
+    setMenuOpen(false);
+  };
+
+  const renderCurrentSection = () => {
+    switch (activeRoute) {
+      case "about":
+        return (
+          <section className="section section-page" id="about">
+            <div className="container">
+              <div className="about-layout">
+                <div className="about-copy reveal">
+                  <div className="section-heading">
+                    <span>About Me</span>
+                    <h2>
+                      <span className="about-accent">Driven, practical</span>
+                      <br />
+                      Software Engineer
+                    </h2>
+                  </div>
+                  <p>
+                    Motivated Software Engineer with hands-on experience in software
+                    development, API work, web interfaces, and mobile product delivery.
+                  </p>
+                  <ul className="about-points">
+                    {aboutPoints.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                  <div className="intro-facts">
+                    {introFacts.map((item) => (
+                      <div key={item.label}>
+                        <span>{item.label}</span>
+                        <strong>{item.value}</strong>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="experience-column reveal">
+                  <div className="experience-heading">
+                    <span>Experience</span>
+                    <h3>Hands-on work.</h3>
+                  </div>
+
+                  <div className="experience-list">
+                    {experience.map((item) => (
+                      <article className="experience-item" key={item.title}>
+                        <span>{item.year}</span>
+                        <h3>{item.title}</h3>
+                        <strong>{item.place}</strong>
+                        <p>{item.text}</p>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+
+      case "stack":
+        return (
+          <section className="section section-page" id="stack">
+            <div className="container">
+              <div className="section-heading stack-heading reveal">
+                <span>Tech Stack</span>
+                <h2>A showcase of my technical expertise</h2>
+              </div>
+
+              <div className="stack-strip reveal">
+                {techStack.map((item) => (
+                  <article className="tech-chip" key={item.name}>
+                    <div className="tech-chip-icon">
+                      <img src={item.icon} alt="" loading="lazy" />
+                    </div>
+                    <span>{item.name}</span>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+
+      case "projects":
+        return (
+          <section className="section section-page" id="projects">
+            <div className="container">
+              <div className="section-heading reveal">
+                <span>Projects</span>
+                <h2>Selected work with real product screens.</h2>
+              </div>
+
+              <div className="project-listing">
+                {projects.map((project, index) => (
+                  <article
+                    className={`project-row reveal ${index % 2 === 1 ? "project-row-reverse" : ""}`}
+                    key={project.title}
+                  >
+                    <div className="project-shot">
+                      <img src={project.image} alt={`${project.title} screenshot`} loading="lazy" />
+                    </div>
+
+                    <div className="project-copy">
+                      <span className="project-type">{project.type}</span>
+                      <h3>{project.title}</h3>
+                      <p>{project.summary}</p>
+
+                      <div className="project-stack" aria-label={`${project.title} technologies`}>
+                        {project.stack.map((item) => (
+                          <TechIcon key={`${project.title}-${item}`} name={item} />
+                        ))}
+                      </div>
+
+                      <div className="project-actions">
+                        <a href={project.live} target="_blank" rel="noreferrer">
+                          Live
+                          <Icon name="arrow" />
+                        </a>
+                        <a href={project.repo} target="_blank" rel="noreferrer">
+                          Code
+                          <Icon name="github" />
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+
+      case "message":
+        return (
+          <section className="section section-page" id="message">
+            <div className="container message-layout">
+              <div className="message-copy reveal">
+                <div className="section-heading compact">
+                  <span>Get In Touch</span>
+                  <h2>Let&apos;s talk about your next project.</h2>
+                </div>
+                <p className="message-note">
+                  Whether you&apos;re hiring, building, or just want to connect, I&apos;d love to hear from you.
+                </p>
+              </div>
+
+              <form className="message-form reveal" onSubmit={handleSubmit}>
+                <label>
+                  Name
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    required
+                  />
+                </label>
+                <label>
+                  Email
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="name@company.com"
+                    required
+                  />
+                </label>
+                <label>
+                  Company
+                  <input
+                    type="text"
+                    name="company"
+                    value={form.company}
+                    onChange={handleChange}
+                    placeholder="Company"
+                    required
+                  />
+                </label>
+                <label>
+                  Message
+                  <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="Hello Praise..."
+                    rows="5"
+                    required
+                  />
+                </label>
+
+                {status.message ? (
+                  <p className={`form-status ${status.type === "success" ? "status-success" : "status-error"}`}>
+                    {status.message}
+                  </p>
+                ) : null}
+
+                <button className="button button-primary form-button" type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send message"}
+                </button>
+              </form>
+            </div>
+          </section>
+        );
+
+      case "contact":
+        return (
+          <section className="section section-page" id="contact">
+            <div className="container contact-grid">
+              <article className="contact-links reveal">
+                <div className="section-heading compact">
+                  <span>Contact</span>
+                  <h2>Quick links.</h2>
+                </div>
+
+                <div className="contact-actions-grid">
+                  {contactLinks.map((item) => (
+                    <a
+                      className="contact-action"
+                      href={item.href}
+                      key={item.label}
+                      target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+                      rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
+                      download={item.download}
+                    >
+                      <Icon name={item.icon} />
+                      <span>{item.label}</span>
+                    </a>
+                  ))}
+                </div>
+
+                <button className="copy-button" type="button" onClick={handleCopyEmail}>
+                  Copy email
+                </button>
+                <p className={`copy-status ${copyStatus ? "is-visible" : ""}`}>{copyStatus}</p>
+              </article>
+
+              <aside className="qr-card reveal">
+                <div className="qr-heading">
+                  <span>
+                    <Icon name="qr" />
+                    Scan portfolio
+                  </span>
+                  <p>Open on phone.</p>
+                </div>
+
+                <img
+                  className="qr-image"
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(shareUrl)}`}
+                  alt="QR code linking to the portfolio"
+                />
+
+                <a className="qr-link" href={shareUrl} target="_blank" rel="noreferrer">
+                  Open link
+                </a>
+              </aside>
+            </div>
+          </section>
+        );
+
+      case "home":
+      default:
+        return (
+          <section className="hero" id="top">
+            <div className="container hero-grid">
+              <div className="hero-visual reveal">
+                <img src={profile.photo} alt="Portrait of Asiimire Praise" />
+                <div className="hero-experience-badge">{profile.experienceBadge}</div>
+              </div>
+
+              <div className="hero-copy reveal">
+                <p className="hero-overline">Hello, I&apos;m</p>
+                <h1>
+                  <span className="hero-name-accent">Asiimire</span>{" "}
+                  <span className="hero-name-main">Praise</span>
+                </h1>
+                <p className="hero-role-line">{profile.role}</p>
+                <p className="hero-text">{profile.blurb}</p>
+
+                <div className="hero-actions">
+                  <button className="button button-primary" type="button" onClick={() => navigateTo("projects")}>
+                    Projects
+                    <Icon name="arrow" />
+                  </button>
+                  <button className="button button-ghost" type="button" onClick={() => navigateTo("message")}>
+                    Message me
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
     }
   };
 
   return (
-    <div className="site-shell">
+    <div className="portfolio-shell">
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
 
       <header className="site-header">
         <div className="container nav">
-          <a className="brand" href="#top" aria-label="Asiimire Praise home">
-            <strong>{profile.name}</strong>
-            <span>{profile.title}</span>
-          </a>
+          <button
+            className="brand brand-button"
+            type="button"
+            aria-label="Asiimire Praise home"
+            onClick={() => navigateTo("home")}
+          >
+            <span className="brand-mark">AP</span>
+            <span className="brand-copy">
+              <strong>{profile.name}</strong>
+              <small>{profile.role}</small>
+            </span>
+          </button>
 
           <button
             className="nav-toggle"
@@ -339,421 +698,45 @@ function App() {
             aria-label="Toggle navigation"
             onClick={() => setMenuOpen((open) => !open)}
           >
-            Menu
+            <Icon name="menu" />
           </button>
 
           <nav aria-label="Primary">
             <ul className={`nav-links ${menuOpen ? "is-open" : ""}`} id="site-nav">
-              {["about", "work", "expertise", "experience", "resume", "contact"].map(
-                (section) => (
-                  <li key={section}>
-                    <a href={`#${section}`} onClick={closeMenu}>
-                      {section === "work"
-                        ? "Projects"
-                        : section.charAt(0).toUpperCase() + section.slice(1)}
-                    </a>
-                  </li>
-                ),
-              )}
+              {navItems.map(([route, label]) => (
+                <li key={route}>
+                  <button
+                    className={activeRoute === route ? "is-active" : ""}
+                    type="button"
+                    onClick={() => navigateTo(route)}
+                  >
+                    {label}
+                  </button>
+                </li>
+              ))}
+              <li>
+                <a
+                  className="nav-cta"
+                  href={profile.resume}
+                  download
+                  onClick={() => setMenuOpen(false)}
+                >
+                  CV
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
       </header>
 
       <main id="main-content">
-        <section className="hero">
-          <div className="container hero-grid">
-            <div className="hero-copy reveal">
-              <span className="eyebrow">Open to opportunities</span>
-              <h1>
-                {profile.name}
-                <span>.</span>
-              </h1>
-              <p className="lead-copy">{profile.subtitle}</p>
-              <div className="hero-actions">
-                <a className="button" href="#work">
-                  View selected work
-                </a>
-                <a className="button-ghost" href={profile.resume} download>
-                  Download CV
-                </a>
-              </div>
-              <div className="hero-metrics">
-                {highlights.map((item) => (
-                  <div className="metric" key={item.label}>
-                    <strong>{item.value}</strong>
-                    <span>{item.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="hero-visual reveal">
-              <img src={profile.photo} alt="Portrait of Asiimire Praise" />
-              <div className="hero-card-note">
-                <strong>{profile.title}</strong>
-                <span>
-                  {profile.location} - Building practical digital products with
-                  JavaScript, React, Node.js, and NestJS.
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" id="about">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span>Professional Snapshot</span>
-              <h2>
-                Full-stack developer focused on reliable products, thoughtful
-                interfaces, and real business impact.
-              </h2>
-              <p>
-                I bring hands-on experience building responsive frontend
-                experiences, backend APIs, and practical digital tools that solve
-                real user and business problems.
-              </p>
-            </div>
-
-            <div className="grid-two">
-              <article className="panel reveal">
-                <h3>About me</h3>
-                <ul>
-                  {strengths.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-
-              <aside className="panel reveal">
-                <h3>Quick facts</h3>
-                <div className="quick-facts">
-                  {quickFacts.map((fact) => (
-                    <div className="fact" key={fact.label}>
-                      <span>{fact.label}</span>
-                      <strong>{fact.value}</strong>
-                    </div>
-                  ))}
-                </div>
-              </aside>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" id="work">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span>Selected Work</span>
-              <h2>
-                Project stories that show business context, technical choices, and
-                practical outcomes.
-              </h2>
-              <p>
-                Each project highlights the problem addressed, the solution
-                delivered, and the technologies used to create measurable value.
-              </p>
-            </div>
-
-            <div className="projects-grid">
-              {projects.map((project) => (
-                <article className="project-card reveal" key={project.title}>
-                  <div className={`project-cover ${project.coverClass}`}>
-                    <div className="project-cover-content">
-                      <span className="project-kicker">{project.kicker}</span>
-                      <h3>{project.title}</h3>
-                    </div>
-                  </div>
-
-                  <div className="project-body">
-                    <p>{project.description}</p>
-                    <div className="project-meta">
-                      <strong>Role</strong>
-                      <span>{project.role}</span>
-                    </div>
-
-                    <ul className="project-list">
-                      {project.impact.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
-
-                    <div className="chips">
-                      {project.stack.map((item) => (
-                        <span className="chip" key={item}>
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="project-links">
-                      <a
-                        className="project-link"
-                        href={project.live}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Visit live project
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section" id="expertise">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span>Expertise</span>
-              <h2>Full-stack and mobile development focused on practical product delivery.</h2>
-              <p>
-                I build across frontend, backend, and mobile, with a focus on
-                usable interfaces, reliable systems, and solutions that support
-                real business and user needs.
-              </p>
-            </div>
-
-            <div className="skills-grid">
-              {capabilities.map((area) => (
-                <article className="skill-card reveal" key={area.title}>
-                  <h3>{area.title}</h3>
-                  <p>{area.description}</p>
-                  <div className="chips">
-                    {area.skills.map((item) => (
-                      <span className="chip" key={item}>
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section" id="experience">
-          <div className="container">
-            <div className="section-heading reveal">
-              <span>Experience</span>
-              <h2>Training and hands-on work grounded in real delivery.</h2>
-              <p>
-                My background combines structured software training with project
-                work that touches frontend interfaces, backend APIs, collaboration
-                practices, and deployment workflows.
-              </p>
-            </div>
-
-            <div className="timeline-grid">
-              {experience.map((item) => (
-                <article className="timeline-item reveal" key={item.title}>
-                  <div className="timeline-meta">
-                    <span className="pill">{item.label}</span>
-                    <strong>{item.period}</strong>
-                  </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.org}</p>
-                  <ul className="timeline-points">
-                    {item.points.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container grid-two">
-            <article className="quote-card reveal">
-              <blockquote>
-                I enjoy turning real business and community needs into software
-                that feels useful, reliable, and easy to understand.
-              </blockquote>
-              <p>
-                My current interests include JavaScript product development,
-                responsive web interfaces, API-driven features, and clean software
-                teamwork.
-              </p>
-            </article>
-
-            <article className="panel reveal">
-              <h3>Education and certifications</h3>
-              <ul>
-                {education.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-                {certifications.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section className="section" id="resume">
-          <div className="container">
-            <article className="panel resume-card reveal">
-              <div>
-                <h3>Resume</h3>
-                <p>
-                  Download my latest CV for a full overview of my software
-                  engineering background, technical skills, and project
-                  experience.
-                </p>
-              </div>
-              <div className="resume-actions">
-                <a className="button" href={profile.resume} download>
-                  Download CV
-                </a>
-                <a className="button-secondary" href="#contact">
-                  Contact me
-                </a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section className="section" id="contact">
-          <div className="container contact-layout">
-            <article className="contact-card reveal">
-              <div className="section-heading">
-                <span>Recruiter Contact</span>
-                <h2>Let's build something meaningful together.</h2>
-                <p>
-                  Recruiters and hiring managers are welcome to get in touch to
-                  discuss opportunities, collaborations, or roles where I can
-                  contribute as a full-stack and mobile developer.
-                </p>
-              </div>
-
-              <ul className="contact-list">
-                <li>
-                  <strong>Email:</strong>&nbsp;
-                  <a href={`mailto:${profile.email}`}>{profile.email}</a>
-                </li>
-                <li>
-                  <strong>Phone:</strong>&nbsp;
-                  <a href={`tel:${profile.phone.replace(/\s+/g, "")}`}>
-                    {profile.phone}
-                  </a>
-                </li>
-                <li>
-                  <strong>Location:</strong>&nbsp;<span>{profile.location}</span>
-                </li>
-                <li>
-                  <strong>LinkedIn:</strong>&nbsp;
-                  <a href={profile.linkedin} target="_blank" rel="noreferrer">
-                    View profile
-                  </a>
-                </li>
-                <li>
-                  <strong>GitHub:</strong>&nbsp;
-                  <a href={profile.github} target="_blank" rel="noreferrer">
-                    See repositories
-                  </a>
-                </li>
-                <li>
-                  <strong>Vercel:</strong>&nbsp;
-                  <a href={profile.vercel} target="_blank" rel="noreferrer">
-                    Project deployments
-                  </a>
-                </li>
-              </ul>
-            </article>
-
-            <form className="message-form reveal" onSubmit={handleSubmit}>
-              <div className="form-heading">
-                <span className="pill">Message Form</span>
-                <h3>Send a hiring inquiry</h3>
-                <p>
-                  Use this form if you would like to discuss an opportunity,
-                  internship, freelance role, or collaboration.
-                </p>
-              </div>
-
-              <label>
-                Full name
-                <input
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  placeholder="Your name"
-                  required
-                />
-              </label>
-
-              <label>
-                Work email
-                <input
-                  type="email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder="name@company.com"
-                  required
-                />
-              </label>
-
-              <label>
-                Company
-                <input
-                  type="text"
-                  name="company"
-                  value={form.company}
-                  onChange={handleChange}
-                  placeholder="Company or organisation"
-                  required
-                />
-              </label>
-
-              <label>
-                Message
-                <textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder="Hello Praise, I would like to discuss..."
-                  rows="6"
-                  required
-                />
-              </label>
-
-              {status.message ? (
-                <p
-                  className={`form-status ${
-                    status.type === "success" ? "status-success" : "status-error"
-                  }`}
-                >
-                  {status.message}
-                </p>
-              ) : null}
-
-              <div className="contact-actions">
-                <button className="button" type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send message"}
-                </button>
-                <button
-                  className="button-secondary"
-                  type="button"
-                  onClick={handleCopyEmail}
-                >
-                  Copy email address
-                </button>
-              </div>
-            </form>
-          </div>
-        </section>
+        {renderCurrentSection()}
       </main>
 
       <footer className="site-footer">
         <div className="container footer-bar">
           <span>
-            &copy; {year} {profile.name}. Open to full-stack, backend, and
-            mobile software opportunities.
+            &copy; {year} {profile.name}. All rights reserved.
           </span>
         </div>
       </footer>
